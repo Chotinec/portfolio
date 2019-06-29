@@ -1,0 +1,43 @@
+.socials__list {
+  display: flex;
+}
+
+.socials__item {
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &--footer {
+    fill: #ffffff;
+  }
+
+  &--footer {
+    display: blok;
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+}
+
+.socials__icon {
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s;
+  fill: $text-color;
+
+  &--footer {
+    fill: rgba(255, 255, 255, 0.3);
+    @include centered('both');
+  }
+
+  &--footer:hover {
+    fill: white;
+  }
+
+  &:hover:not(&--footer) {
+    transform: scale(1.2);
+  }
+}

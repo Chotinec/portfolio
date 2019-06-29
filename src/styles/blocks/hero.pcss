@@ -1,0 +1,31 @@
+.hero {
+  position: relative;
+}
+
+.hero__greeting {
+  @include centered('both');
+}
+
+.hero__description {
+  color: rgba(65, 76, 99, 0.4);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero__description-text {
+  display: block;
+}
+
+
+.hero__name {
+  text-align: center;
+  line-height: 60px;
+}
+
+.hero__scroll {
+  @include centered('x');
+  bottom: 20px;
+}

@@ -1,0 +1,84 @@
+extends main.layout.pug
+
+include ./mixins.pug
+
+block content
+  .maincontent
+    //- +image('content/user.jpg', 'user-pic')
+    //- +icon('link', 'link-class')
+    //- .icon-bg
+  section.section.hero.container
+    .hero__bg
+      +image('bg/forest.jpg', 'hero__bg-img')
+
+    ul.socials
+      each item in ['fb', 'gh', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link--${item}`)
+
+    a(href="").hamburger
+
+    a(href="").down-arrow
+      +icon('arrow-down', 'down-arrow__icon')
+      //- +icon('arrow-down', 'link-class')
+
+    .hero__title
+      +image('content/portfolio_header.png', 'section-title')
+      .user.hero__user-block
+        .user__photo
+          .user__photo-avatar
+            +image('content/user.jpg', 'user__photo-img')
+        .user__name Артем Хотинец
+        .user__desc Личный сайт веб-разработчика
+
+  section.section.about.container
+    .about__left
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fill_white about__triangles")
+        polygon(points="0,0 0,100 1000,100")
+      .title.about__section-title
+        |Обо мне
+      .user-about
+        .user-about__picture
+        .user-about__title.subtitle
+          |Кто я
+        .user-about__text
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum veniam sapiente fuga ab culpa eveniet, nobis perferendis quod quos veritatis reiciendis expedita itaque illo in earum. Sed voluptatibus eligendi magnam!
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis voluptas temporibus vel numquam labore ipsa corrupti ea, aut laudantium illum soluta quia ipsam! Et fugit praesentium eos corrupti accusantium.
+
+    .about__right
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fill_beige about__triangles")
+        polygon(points="0,100 1000,100 1000,0")
+      .about-data
+        .about-data__description.about-user--info
+          .about-data__title
+            .subtitle Чем я могу быть полезен
+          .about-data__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officia impedit veritatis fugit labore soluta mollitia autem vitae. Magnam, exercitationem sed? Nobis veniam provident suscipit id! Ab adipisci dolore nihil!
+        .about-data__content
+
+        - var skills = [
+        - {'Frontend': [1, 2, 3]}, 
+        - {'Backend': [4, 5, 6]}, 
+        - {'WorkFlow': [7, 8, 9]}
+        -]
+
+          ul.skils
+            each skill in skills
+              each skillsArray, skillName in skill
+                li.skills__item
+                  .skill-section
+                    .skill-section__title= skillName
+                    ul.skill-section__list
+                      each skillTitle in skillsArray
+                        li.scills-section__item
+                          .skill
+                            svg.skill__circle
+                              .skill__name= skillTitle
+
+  section.section.map

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Portfolio | main page
+  body
+    .wrapper
+      main.maincontent
+        //- +image('content/user.jpg', 'user-pic')
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        .welcome
+          section.fullscreen-section.hero
+            .container
+              header.header
+
+                .header__left
+                  span.logo HA
+
+                 .header__center
+                  nav.nav
+                    ul.nav__list
+                      - var nav = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
+                      each item in nav
+                        li.nav__item
+                          a(href='#' class='nav__link')= item
+
+                 .header__right
+                  .socials
+                    ul.socials__list
+                    - var socials = ['insta', 'vk', 'github']
+                    each social in socials
+                      a(class='socials__link' href='#')
+                        +icon(social, `socials__icon socials__icon--${item}`)
+
+              .hero__greeting
+                .hero__description
+                  span.hero__description-text Личный сай
+                  span.hero__description-text веб-разработчика
+
+                .hero__name
+                  h1.title.title--hero Артем
+                  h1.title.title--hero Хотинец
+
+              .hero__scroll
+                a(href='#').scroll
+                  span.scroll-text Скролл
+                  +icon('scroll', 'scroll__icon')   
+
+    footer.footer
+      .container.footer__container
+        .footer__copyright
+          .copyright
+            .copyright__year © 2019
+            .copyright__info
+              .copyright__name
+                h3.title.title--copiright Хотинец
+                h3.title.title--copiright Артем
+              .copyright__desc  
+                span.copyright__desc-text Личный сайт
+                span.copyright__desc-text веб-разработчика
+        .footer__content content
+    
