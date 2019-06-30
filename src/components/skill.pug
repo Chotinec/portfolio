@@ -1,0 +1,10 @@
+mixin skill(skillTitle)
+  .skill
+    svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__svg
+      defs
+        linearGradient#circle-gradient(x1="0%" y1="0%" x2="0%" y2="100%")
+          stop(offset="0%" stop-color="#ad00ed")
+          stop(offset="100%" stop-color="#5500f2")
+      circle(cx="50" cy="50" r="40").skill__circle.skill__circle--under
+      circle(cx="50" cy="50" r="40" stroke="url(#circle-gradient)" style="animation-delay: -60s").skill__circle.skill__circle--above
+    .skill__name= skillTitle

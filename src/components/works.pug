@@ -1,0 +1,39 @@
+section.works#works
+  - 
+    var previewsPath =[
+    'content/works_preview/1.jpg',
+    'content/works_preview/2.jpg',
+    'content/works_preview/3.jpg',
+    'content/works_preview/4.jpg',
+    'content/works_preview/5.jpg'
+    ]
+  .container.works__container 
+    h2.title.title--works.works__title Мои работы 
+    .works__content
+      .works__slider
+        ul.works__slider-list
+          li.works__slider-item
+            .work__preview-block
+              .works__preview-img-wrapper
+                +image(previewsPath[0], "works__preview-img", "work big")
+                ul.works__preview-list
+                  each item, index in previewsPath
+                    - var activeClass = index === 0 ? 'works__preview-item--active': ''
+                    li(class=`works__preview-item works__preview-item-${item} ${activeClass}`)
+                      button(type="button").works__preview-item-btn
+                        +image(item, "works__preview-item-img", "work small")
+              .works__slider-arrows
+                button(type="button").works__slider-btn.works__slider-btn--up
+                  +icon('arrow-down', 'arrow arrow--up')
+                button(type="button").works__slider-btn.works__slider-btn--down
+                  +icon('arrow-down', 'arrow arrow--down')  
+            .works__descroption-block
+              - var skillsList = ['HTML', 'CSS', 'JavaScript']
+              ul.works__skills-list
+                each item in skillsList
+                  li.works__skills-item= item
+              .works__description
+                h3.works__description-title Сайт школы образования
+                .works__description-text
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              a(href="#" target="_blank").works__description-link Посмотреть сайт
