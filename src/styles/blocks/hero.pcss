@@ -4,6 +4,10 @@
 
 .hero__greeting {
   @include centered('both');
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .hero__description {
@@ -13,6 +17,11 @@
   line-height: 30px;
   text-align: center;
   margin-bottom: 20px;
+
+   @include desktop {
+    text-align: right;
+    margin-right: 40px;
+  }
 }
 
 .hero__description-text {
@@ -23,6 +32,10 @@
 .hero__name {
   text-align: center;
   line-height: 60px;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .hero__scroll {

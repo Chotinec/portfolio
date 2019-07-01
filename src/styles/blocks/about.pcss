@@ -11,6 +11,10 @@
 
 .about__content-wrapper {
   width: 70%;
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .about__content {
@@ -66,7 +70,7 @@
 }
 
 .about__text {
-  margin-bottom: 80px;
+  margin-bottom: 15%;
 
   &--italic {
     font-style: italic;
