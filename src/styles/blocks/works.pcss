@@ -6,7 +6,7 @@
   margin-bottom: 6%;
 }
 
-.works__slider-item {
+.works__slider-content {
   display: flex;
 }
 
@@ -39,9 +39,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  max-height: 80%;
+  /* max-height: 80%; */
   overflow: hidden;
   width: 20%;
+  box-shadow: -1.875rem 0 3.125rem -0.625rem rgba(0,0,0,.5);
 }
 
 .works__preview-item {
@@ -138,7 +139,7 @@
 }
 
 .works__slider-arrows {
-  background: #2d3c4e;
+  background: $text-color;
   display: inline-flex;
 }
 
@@ -148,6 +149,6 @@
   position: relative;
 
   &:hover {
-    border: 1px solid #414c63;
+    background: $hover;
   }
 }

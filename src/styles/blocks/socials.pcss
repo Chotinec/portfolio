@@ -8,10 +8,6 @@
     margin-right: 40px;
   }
 
-  &--header {
-    /* fill: $white; */
-  }
-
   &--footer {
     display: blok;
     border: 1px solid rgba(255, 255, 255, 0.3);;
@@ -20,6 +16,12 @@
     height: 50px;
     position: relative;
     fill: $white;
+
+     &:hover {
+      .socials__link .socials__icon {
+         fill: $dark-hover;
+      }
+    }
   }
 }
 
@@ -32,16 +34,13 @@
   &--footer {
     fill: rgba(255, 255, 255, 0.3);
     @include centered('both');
-
-    &:hover {
-       fill: white;
-    }
   }
 
   &--header {
     
     &:hover {
       transform: scale(1.2);
+      fill: $hover;
     }
   }
 }
