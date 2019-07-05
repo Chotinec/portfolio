@@ -1,0 +1,22 @@
+section.about#about
+  - var aboutInfo = {"Проживаю:": "Израиль", "Возраст:": "29 лет", "Родился:": "11 августа 1989"}
+  .container.about__conteiner
+    .about__content-wrapper
+      .about__content
+        .about__info
+          .about__img-wrapper
+            +image('content/user.jpg', 'about__img', 'user icon')
+          table.about__info-table
+            each value, key in aboutInfo 
+              tr.about__info-row
+                td.about__info-td.about__info-key #{key}
+                td.about__info-td.about__info-val #{value}
+          .about__star *
+        .about__description
+          .about__geeting
+            p.about__greeeting-title Привет, меня зовут
+            h2.title.title--about.about__title Хотинец Артем
+            .about__text
+              p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            .about__text.about__text--italic
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!

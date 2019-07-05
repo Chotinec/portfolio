@@ -1,0 +1,22 @@
+.scroll {
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    .scroll__icon {
+      transform: translateY(-20%);
+    }
+  }
+}
+
+.scroll__text {
+  display: blok;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.scroll__icon {
+  width: 30px;
+  height: 30px;
+  transition: transform .3s;
+}

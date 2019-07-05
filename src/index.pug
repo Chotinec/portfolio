@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -9,7 +9,25 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+      main.maincontent
+        include components/welcome
+
+        //- triangles
+        .triangles.triangles--about
+          svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,100")
+          svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,100 1000,100 1000,0")
+
+        include components/skills
+
+        include components/works
+
+        //- triangle
+        .triangles.triangles--reviews-contacts
+          svg.triangles-reviews-contacts__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 500,100 1000,0")
+
+        include components/reviews-contacts 
+
+    include components/footer

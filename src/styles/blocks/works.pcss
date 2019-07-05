@@ -1,0 +1,154 @@
+.works__container  {
+  padding: 5% 2% 5% 0;
+}
+
+.works__title {
+  margin-bottom: 6%;
+}
+
+.works__slider-content {
+  display: flex;
+}
+
+.work__preview-block {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+
+   &::before {
+    content: "1";
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: -180px;
+    font-size: 400px;
+    font-weight: 800;
+    color: rgba(65, 76, 99, 0.05);
+    z-index: -1;
+  }
+}
+
+.works__preview-img-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.works__preview-list {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* max-height: 80%; */
+  overflow: hidden;
+  width: 20%;
+  box-shadow: -1.875rem 0 3.125rem -0.625rem rgba(0,0,0,.5);
+}
+
+.works__preview-item {
+  height: 20%;
+  transition: transform .3s;
+
+  &--active {
+    border: 2px solid #f29400;
+  }
+
+  &:not(&--active):hover {
+    border: 2px solid #f29400;
+  }
+}
+
+.works__preview-item-btn {
+  width: 100%;
+  height: 100%;
+}
+
+.works__descroption-block {
+  width: 40%;
+  padding-left: 10%;
+}
+
+.works__skills-list {
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.works__skills-item {
+  margin-right: 5px;
+  padding: 15px 20px;
+  border-radius: 22.5px;
+  background-color: rgba(#7aa0c5, .1);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(65, 76, 99, 0.7);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.works__description-title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 10%;
+}
+
+.works__description-text {
+  color: rgba(65, 76, 99, 0.7);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.88;
+  margin-bottom: 10%;
+}
+
+.works__description-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: $links-color;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before {
+    content: "";
+    margin-right: 5%;
+    width: 15px;
+    height: 15px;
+    background: svg-load("link.svg", fill=$links-color, width=100%, height=100%) center center no-repeat;
+  }
+
+  &:focus {
+    color: #000;
+
+    &:before {
+      background: svg-load("link.svg", fill=#000, width=100%, height=100%) center center no-repeat;
+    }
+  }
+
+  &:active {
+    color: red;
+
+    &:before {
+      background: svg-load("link.svg", fill=red, width=100%, height=100%) center center no-repeat;
+    }
+  }
+}
+
+.works__slider-arrows {
+  background: $text-color;
+  display: inline-flex;
+}
+
+.works__slider-btn {
+  height: 50px;
+  width: 50px;
+  position: relative;
+
+  &:hover {
+    background: $hover;
+  }
+}

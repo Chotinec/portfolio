@@ -1,0 +1,11 @@
+mixin review(item)
+  .review
+    .review__content-block
+      .review__content
+        p #{item.content}
+      .review__person-info
+        .review__img-wrapper
+          +image(`${item.photo}`, "review__img", "person photo")
+        .review__person-desc
+          .review__name #{item.name}
+          .review__about #{item.about}

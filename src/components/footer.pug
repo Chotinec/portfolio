@@ -1,0 +1,18 @@
+footer.footer
+  .container.footer__container
+    .footer__copyright
+      include copyright
+    .footer__content
+      .footer__nav
+        include nav
+        +nav('footer')
+      .footer__content-data
+        .footer__about-me
+          article.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+          .footer__cocials
+            include socials
+            +socials('footer')
+        .footer__lust
+          .footer__text
+            p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете        
+          site.footer__lust-auther Martin Golding
